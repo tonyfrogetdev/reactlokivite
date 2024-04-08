@@ -1,4 +1,4 @@
-const Dishes = ({ title, price, image }) => {
+const Dish = ({ title, price, image }) => {
   return (
     <>
       <div className="mexicanDish">
@@ -11,4 +11,4 @@ const Dishes = ({ title, price, image }) => {
   );
 };
 
-export default Dishes;
+export default Dish;

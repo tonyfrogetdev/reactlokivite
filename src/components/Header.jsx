@@ -19,16 +19,12 @@ const Header = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto gap-2" navbarScroll>
-              <NavLink
-                to="/"
-                className="text-black fw-semibold"
-                activeClassName="active"
-              >
+              <NavLink to="/" className="nav-link" activeClassName="active">
                 Accueil
               </NavLink>
               <NavLink
                 to="/a-propos"
-                className="text-black fw-semibold "
+                className="nav-link"
                 activeClassName="active"
               >
                 à Propos

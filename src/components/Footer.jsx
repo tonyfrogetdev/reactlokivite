@@ -1,11 +1,8 @@
 import { Container } from "react-bootstrap";
-
+import "../assets/footer.css";
 const Footer = () => {
   return (
-    <footer
-      className="bg-secondary
-     py-4"
-    >
+    <footer className="footer">
       <Container>
         <span className="d-flex justify-content-center text-white">
           « Copyright Mexican Food 2024 ».

@@ -1,10 +1,10 @@
 import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../assets/styles/dish.css";
 
 const Dish = ({ title, price, image, slug }) => {
   return (
-    <Link to={`/plat/${slug}`} className="dish-link">
+    <NavLink to={`/plat/${slug}`} activeClassName="active">
       <Card>
         <Card.Img className="dish" variant="top" src={image} alt={title} />
         <Card.Body>
@@ -12,7 +12,7 @@ const Dish = ({ title, price, image, slug }) => {
           <Card.Text>Price: {price}</Card.Text>
         </Card.Body>
       </Card>
-    </Link>
+    </NavLink>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
+import logo from "../assets/logo.webp";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="/">
             <img
-              src="https://cdn.pixabay.com/photo/2018/03/26/14/18/man-3262834_960_720.png"
+              src={logo}
               alt="Logo"
               width="50"
               height="50"

@@ -1,5 +1,5 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from "../assets/logo.webp";
+import logo from "../assets/images/logo.webp";
 import "../assets/styles/header.css";
 const Header = () => {
   return (

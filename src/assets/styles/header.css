@@ -2,3 +2,14 @@ img {
   width: 50px;
   height: 50px;
 }
+
+.nav-link {
+  color: grey;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}

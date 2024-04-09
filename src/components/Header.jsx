@@ -1,6 +1,7 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/images/logo.webp";
 import "../assets/styles/header.css";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <header>
@@ -17,14 +18,21 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav className="ms-auto" navbarScroll>
-              <Nav.Link
-                href="/"
-                className="text-black fw-semibold text-decoration-underline"
+            <Nav className="ms-auto gap-2" navbarScroll>
+              <NavLink
+                to="/"
+                className="text-black fw-semibold"
+                activeClassName="active"
               >
                 Accueil
-              </Nav.Link>
-              <Nav.Link href="#">à Propos</Nav.Link>
+              </NavLink>
+              <NavLink
+                to="/a-propos"
+                className="text-black fw-semibold "
+                activeClassName="active"
+              >
+                à Propos
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -9,8 +9,8 @@ function App() {
     <>
       <Header />
       <Container>
-        <Row className="justify-content-md-center  my-3">
-          <Col md={3}>
+        <Row className="d-flex justify-content-center my-5 ">
+          <Col md={4}>
             <Dish
               title={"Tacos à l’unité"}
               price={"3€"}
@@ -19,7 +19,7 @@ function App() {
               }
             />
           </Col>
-          <Col md={3}>
+          <Col md={4}>
             <Dish
               title={"Enchiladas"}
               price={"12€"}
@@ -28,7 +28,7 @@ function App() {
               }
             />
           </Col>
-          <Col md={3}>
+          <Col md={4}>
             <Dish
               title={"Mole poblano"}
               price={"15€"}

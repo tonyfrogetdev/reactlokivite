@@ -1,0 +1,4 @@
+.dish-image {
+  height: 200px; /* ou toute autre valeur fixe que vous souhaitez */
+  object-fit: cover; /* garantit que l'image est entièrement couverte et conserve ses proportions */
+}

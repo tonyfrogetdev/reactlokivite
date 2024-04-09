@@ -13,12 +13,16 @@ const Header = () => {
               height="50"
               className="d-inline-block align-top"
             />
-            Navbar
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto" navbarScroll>
-              <Nav.Link href="/">Accueil</Nav.Link>
+              <Nav.Link
+                href="/"
+                className="text-black fw-semibold text-decoration-underline"
+              >
+                Accueil
+              </Nav.Link>
               <Nav.Link href="#">à Propos</Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -1,13 +1,10 @@
 import { Container, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
 
 const DishDetails = () => {
-  const { slug } = useParams();
-
   return (
     <Container>
       <Row>
-        <h1>{slug}</h1>
+        <h1>Page non trouvée</h1>
       </Row>
     </Container>
   );

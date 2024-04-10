@@ -4,9 +4,13 @@ import { useState } from "react";
 
 const Home = () => {
   const [showNewOnly, setShowNewOnly] = useState(false);
+  const [showButton, setShowButton] = useState("Nouveautés uniquement");
 
   const handleShowNewOnly = () => {
     setShowNewOnly(!showNewOnly);
+    setShowButton(
+      showNewOnly ? "Nouveautés uniquement" : "Voir tous les plats"
+    );
   };
   const dishes = [
     {
@@ -50,7 +54,7 @@ const Home = () => {
     <Container>
       <Row className="d-flex justify-content-center my-5 ">
         <Button onClick={handleShowNewOnly} variant="success">
-          Nouveautés uniquement
+          {showButton}
         </Button>
         {filteredDishes.map((dish, index) => (
           <Col md={4} key={index}>

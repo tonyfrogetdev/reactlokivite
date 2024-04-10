@@ -9,7 +9,7 @@ const Home = () => {
   const handleShowNewOnly = () => {
     setShowNewOnly(!showNewOnly);
     setShowButton(
-      showNewOnly ? "Nouveautés uniquement" : "Voir tous les plats"
+      !showNewOnly ? "Voir tous les plats" : "Nouveautés uniquement"
     );
   };
   const dishes = [
@@ -41,14 +41,9 @@ const Home = () => {
     },
   ];
 
-  let filteredDishes;
-  if (showNewOnly) {
-    filteredDishes = dishes.filter((dish) => {
-      return dish.new;
-    });
-  } else {
-    filteredDishes = dishes;
-  }
+  const filteredDishes = showNewOnly
+    ? dishes.filter((dish) => dish.new)
+    : dishes;
 
   return (
     <Container>

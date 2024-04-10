@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="/">
+          <NavLink to="/" className="navbar-brand">
             <img
               src={logo}
               alt="Logo"
@@ -15,18 +15,14 @@ const Header = () => {
               height="50"
               className="d-inline-block align-top"
             />
-          </Navbar.Brand>
+          </NavLink>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto gap-2" navbarScroll>
-              <NavLink to="/" className="nav-link" activeClassName="active">
+              <NavLink to="/" className="nav-link">
                 Accueil
               </NavLink>
-              <NavLink
-                to="/a-propos"
-                className="nav-link"
-                activeClassName="active"
-              >
+              <NavLink to="/a-propos" className="nav-link">
                 à Propos
               </NavLink>
             </Nav>

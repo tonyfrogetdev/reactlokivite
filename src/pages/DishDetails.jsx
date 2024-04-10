@@ -15,7 +15,7 @@ const DishDetails = () => {
     <Container>
       <Row className="my-4">
         <Col className="my-4">
-          <img src={dish.image} alt={dish.title} className="dish" />
+          <img src={dish.image} alt={dish.title} className="dishdetails" />
         </Col>
         <Col className="my-4">
           <h1>{dish.title}</h1>

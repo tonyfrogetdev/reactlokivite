@@ -1,11 +1,17 @@
+import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import dishesData from "../datas/dishes.json";
 import "../assets/styles/dishdetails.css";
+
 const DishDetails = () => {
   const { slug } = useParams();
+  const [dish, setDish] = useState(null);
 
-  const dish = dishesData.find((dish) => dish.slug === slug);
+  useEffect(() => {
+    const foundDish = dishesData.find((dish) => dish.slug === slug);
+    setDish(foundDish);
+  }, [slug]);
 
   if (!dish) {
     return <div>Plat introuvable</div>;

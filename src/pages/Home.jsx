@@ -1,7 +1,13 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Dish from "../components/Dish.jsx";
+import { useState } from "react";
 
 const Home = () => {
+  const [showNewOnly, setShowNewOnly] = useState(false);
+
+  const handleShowNewOnly = () => {
+    setShowNewOnly(!showNewOnly);
+  };
   const dishes = [
     {
       title: "Tacos à l'unité",
@@ -31,10 +37,22 @@ const Home = () => {
     },
   ];
 
+  let filteredDishes;
+  if (showNewOnly) {
+    filteredDishes = dishes.filter((dish) => {
+      return dish.new;
+    });
+  } else {
+    filteredDishes = dishes;
+  }
+
   return (
     <Container>
       <Row className="d-flex justify-content-center my-5 ">
-        {dishes.map((dish, index) => (
+        <Button onClick={handleShowNewOnly} variant="success">
+          Nouveautés uniquement
+        </Button>
+        {filteredDishes.map((dish, index) => (
           <Col md={4} key={index}>
             <Dish
               title={dish.title}

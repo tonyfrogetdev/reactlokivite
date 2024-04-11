@@ -1,9 +1,12 @@
 import { Container, Table } from "react-bootstrap";
 import { useCart } from "../Context/CartContext";
+import { useCartTotalAmount } from "../Hooks/CartTotalAmount";
+import { useCartTotalItems } from "../Hooks/CartTotalItems";
 
 const Cart = () => {
   const { cartProducts } = useCart();
-
+  const totalAmount = useCartTotalAmount();
+  const totalItems = useCartTotalItems();
   return (
     <Container>
       <h1>Panier</h1>
@@ -25,6 +28,9 @@ const Cart = () => {
           ))}
         </tbody>
       </Table>
+      <p>
+        Total : {totalItems} plats, pour un total de : {totalAmount}€
+      </p>
     </Container>
   );
 };

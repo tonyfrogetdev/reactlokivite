@@ -16,7 +16,7 @@ function App() {
 
   return (
     <Routes>
-      <Route element={<Layout countCart={countCart} addToCart={addToCart} />}>
+      <Route element={<Layout countCart={countCart} />}>
         <Route index element={<Home />} />
         <Route
           path="/plat/:slug"

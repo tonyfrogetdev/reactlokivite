@@ -1,20 +1,25 @@
-import { Container, Row, Col } from "react-bootstrap";
-import "../assets/styles/cart.css";
+import { Container, Table } from "react-bootstrap";
 
 const Cart = ({ countCart }) => {
   return (
     <Container>
       <h1>Panier</h1>
-      <Row className="row-style">
-        <Col className="bordercol">Nom</Col>
-        <Col className="bordercol">Prix</Col>
-      </Row>
-      {countCart.map((item, index) => (
-        <Row key={index} className={index % 2 === 0 ? "secondRow" : "firstRow"}>
-          <Col className="bordercol">{item.title}</Col>
-          <Col className="bordercol">{item.price}</Col>
-        </Row>
-      ))}
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+          {countCart.map((item, index) => (
+            <tr key={index}>
+              <td>{item.title}</td>
+              <td>{item.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
     </Container>
   );
 };

@@ -6,7 +6,7 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 import Cart from "./pages/Cart";
-import { CartProvider } from "./Context/CartContext";
+import { CartProvider } from "./utils/context/CartContext";
 
 function App() {
   return (

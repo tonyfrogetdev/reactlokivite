@@ -2,8 +2,8 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/images/logo.webp";
 import "../assets/styles/header.css";
 import { NavLink } from "react-router-dom";
+import { useCartTotalItems } from "../utils/hooks/CartTotalItems";
 
-import { useCartTotalItems } from "../Hooks/CartTotalItems";
 const Header = () => {
   const totalItems = useCartTotalItems();
 

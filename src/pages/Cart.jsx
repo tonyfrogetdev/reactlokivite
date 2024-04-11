@@ -1,7 +1,7 @@
 import { Container, Table } from "react-bootstrap";
-import { useCart } from "../Context/CartContext";
-import { useCartTotalAmount } from "../Hooks/CartTotalAmount";
-import { useCartTotalItems } from "../Hooks/CartTotalItems";
+import { useCart } from "../utils/context/CartContext";
+import { useCartTotalAmount } from "../utils/hooks/CartTotalAmount";
+import { useCartTotalItems } from "../utils/hooks/CartTotalItems";
 
 const Cart = () => {
   const { cartProducts } = useCart();

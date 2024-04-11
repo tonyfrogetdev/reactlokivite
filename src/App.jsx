@@ -23,7 +23,7 @@ function App() {
           element={<DishDetails addToCart={addToCart} />}
         />
         <Route path="/a-propos" element={<About />} />
-        <Route path="/panier" element={<Cart />} />
+        <Route path="/panier" element={<Cart countCart={countCart} />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

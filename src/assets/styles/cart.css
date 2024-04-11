@@ -1,0 +1,17 @@
+.firstRow {
+  background-color: #f0f0f0;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.secondRow {
+  background-color: #ffffff;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.bordercol {
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.array {
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+}

@@ -2,7 +2,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/images/logo.webp";
 import "../assets/styles/header.css";
 import { NavLink } from "react-router-dom";
-const Header = () => {
+const Header = ({ countCart }) => {
   return (
     <header>
       <Navbar bg="light" expand="lg">
@@ -24,6 +24,9 @@ const Header = () => {
               </NavLink>
               <NavLink to="/a-propos" className="nav-link">
                 à Propos
+              </NavLink>
+              <NavLink to="/panier" className="nav-link">
+                Panier({countCart.length})
               </NavLink>
             </Nav>
           </Navbar.Collapse>

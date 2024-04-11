@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom";
 import dishesData from "../datas/dishes.json";
 import "../assets/styles/dishdetails.css";
 
-const DishDetails = () => {
+const DishDetails = ({ addToCart }) => {
   const { slug } = useParams();
-  const [dish, setDish] = useState(null);
+  const [dish, setDish] = useState();
 
   useEffect(() => {
     const foundDish = dishesData.find((dish) => dish.slug === slug);
@@ -16,7 +16,9 @@ const DishDetails = () => {
   if (!dish) {
     return <div>Plat introuvable</div>;
   }
-
+  const handleAddToCart = () => {
+    addToCart(dish);
+  };
   return (
     <Container>
       <Row className="my-4">
@@ -27,7 +29,9 @@ const DishDetails = () => {
           <h1>{dish.title}</h1>
           <p>{dish.description}</p>
           <p className="fw-bold">Prix : {dish.price}</p>
-          <Button variant="primary">Commander</Button>
+          <Button variant="primary" onClick={handleAddToCart}>
+            Commander
+          </Button>
         </Col>
       </Row>
     </Container>

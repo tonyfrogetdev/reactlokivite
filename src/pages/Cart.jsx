@@ -1,6 +1,9 @@
 import { Container, Table } from "react-bootstrap";
+import { useCart } from "../Context/CartContext";
 
-const Cart = ({ countCart }) => {
+const Cart = () => {
+  const { cartProducts } = useCart();
+
   return (
     <Container>
       <h1>Panier</h1>
@@ -9,13 +12,15 @@ const Cart = ({ countCart }) => {
           <tr>
             <th>Nom</th>
             <th>Prix</th>
+            <th>Quantité</th>
           </tr>
         </thead>
         <tbody>
-          {countCart.map((item, index) => (
+          {cartProducts.map((item, index) => (
             <tr key={index}>
               <td>{item.title}</td>
               <td>{item.price}</td>
+              <th>{item.quantity}</th>
             </tr>
           ))}
         </tbody>

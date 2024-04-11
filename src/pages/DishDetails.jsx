@@ -3,11 +3,12 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import dishesData from "../datas/dishes.json";
 import "../assets/styles/dishdetails.css";
+import { useCart } from "../Context/CartContext";
 
-const DishDetails = ({ addToCart }) => {
+const DishDetails = () => {
   const { slug } = useParams();
   const [dish, setDish] = useState();
-
+  const { addToCart } = useCart();
   useEffect(() => {
     const foundDish = dishesData.find((dish) => dish.slug === slug);
     setDish(foundDish);

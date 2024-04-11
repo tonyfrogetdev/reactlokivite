@@ -2,7 +2,11 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/images/logo.webp";
 import "../assets/styles/header.css";
 import { NavLink } from "react-router-dom";
-const Header = ({ countCart }) => {
+import { useCart } from "../Context/CartContext";
+
+const Header = () => {
+  const { getQuantity } = useCart();
+  const quantity = getQuantity();
   return (
     <header>
       <Navbar bg="light" expand="lg">
@@ -26,7 +30,7 @@ const Header = ({ countCart }) => {
                 à Propos
               </NavLink>
               <NavLink to="/panier" className="nav-link">
-                Panier({countCart.length})
+                Panier({quantity})
               </NavLink>
             </Nav>
           </Navbar.Collapse>

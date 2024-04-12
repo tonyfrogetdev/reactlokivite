@@ -1,11 +1,14 @@
 import { Container, Row, Col } from "react-bootstrap";
-
+import { Helmet } from "react-helmet";
 const About = () => {
   return (
     <Container>
       <Row className="mt-4">
         <Col>
-          <h1 className="mb-4">À Propos</h1>
+          <Helmet>
+            <h1 className="mb-4">À Propos</h1>
+          </Helmet>
+
           <p>
             Bienvenue dans notre restaurant mexicain, où l'authenticité et la
             saveur se rencontrent pour créer une expérience culinaire

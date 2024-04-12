@@ -4,13 +4,16 @@ import Layout from "./components/Layout";
 import DishDetails from "./pages/DishDetails";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-
+import { Helmet } from "react-helmet";
 import Cart from "./pages/Cart";
 import { CartProvider } from "./utils/context/CartContext";
 
 function App() {
   return (
     <CartProvider>
+      <Helmet>
+        <title>Mexican Foods</title>
+      </Helmet>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />

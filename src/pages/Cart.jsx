@@ -2,14 +2,17 @@ import { Container, Table } from "react-bootstrap";
 import { useCart } from "../utils/context/CartContext";
 import { useCartTotalAmount } from "../utils/hooks/CartTotalAmount";
 import { useCartTotalItems } from "../utils/hooks/CartTotalItems";
-
+import { Helmet } from "react-helmet";
 const Cart = () => {
   const { cartProducts } = useCart();
   const totalAmount = useCartTotalAmount();
   const totalItems = useCartTotalItems();
   return (
     <Container>
-      <h1>Panier</h1>
+      <Helmet>
+        <h1>Panier</h1>
+      </Helmet>
+
       <Table striped bordered hover>
         <thead>
           <tr>

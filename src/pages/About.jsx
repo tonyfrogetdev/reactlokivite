@@ -6,9 +6,10 @@ const About = () => {
       <Row className="mt-4">
         <Col>
           <Helmet>
-            <h1 className="mb-4">À Propos</h1>
+            <title>À Propos</title>
           </Helmet>
 
+          <h1 className="mb-4">À Propos</h1>
           <p>
             Bienvenue dans notre restaurant mexicain, où l'authenticité et la
             saveur se rencontrent pour créer une expérience culinaire

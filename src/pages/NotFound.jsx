@@ -5,9 +5,9 @@ const NotFound = () => {
     <Container>
       <Row>
         <Helmet>
-                 <h1>Page non trouvée</h1>
+          <title>Page non trouvée</title>
         </Helmet>
- 
+        <h1>Page non trouvée</h1>
       </Row>
     </Container>
   );

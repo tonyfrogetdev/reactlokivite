@@ -10,9 +10,9 @@ const Cart = () => {
   return (
     <Container>
       <Helmet>
-        <h1>Panier</h1>
+        <title>Panier</title>
       </Helmet>
-
+      <h1>Panier</h1>
       <Table striped bordered hover>
         <thead>
           <tr>

@@ -23,15 +23,15 @@ const DishDetails = () => {
   };
   return (
     <Container>
+      <Helmet>
+        <title>{dish.title}</title>
+      </Helmet>
       <Row className="my-4">
         <Col className="my-4">
           <img src={dish.image} alt={dish.title} className="dishdetails" />
         </Col>
         <Col className="my-4">
-          <Helmet>
-              <h1>{dish.title}</h1>
-          </Helmet>
-        
+          <h1>{dish.title}</h1>
           <p>{dish.description}</p>
           <p className="fw-bold">Prix : {dish.price}</p>
           <Button variant="primary" onClick={handleAddToCart}>
